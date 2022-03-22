@@ -5,18 +5,14 @@ name = "burgundy"
 light = true
 
 # Primary
-primary = "7D1128"
+primary = "#7D1128"
 
 # Menu
-menu_primary = "7D1128"
-menu_text = "#7D1128"
-menu_text_active = "7D1128"
-menu_title = "7D1128"
+menu_primary = "#7D1128"
+menu_text = "#fff"
+menu_text_active = "#000000"
+menu_title = "#fff"
 
 # Home sections
-home_section_odd = "7D1128"
-home_section_even = "7D1128"
-
-[dark]
-  link = "7D1128"
-  link_hover = "7D1128"
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(247, 247, 247)"

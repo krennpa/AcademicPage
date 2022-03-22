@@ -1,23 +1,22 @@
 # Theme metadata
 name = "burgundy"
 
-[light]
-  # Primary
-  primary = " #900C3F"
+# Is theme light or dark?
+light = true
 
-  # Menu
-  menu_primary = "#fff"
-  menu_text = "#34495e"
-  menu_text_active = "#2962ff"
-  menu_title = "#2b2b2b"
+# Primary
+primary = "7D1128"
 
-  # Home sections
-  home_section_odd = "rgb(255, 255, 255)"
-  home_section_even = "rgb(247, 247, 247)"
+# Menu
+menu_primary = "7D1128"
+menu_text = "#7D1128"
+menu_text_active = "7D1128"
+menu_title = "7D1128"
+
+# Home sections
+home_section_odd = "7D1128"
+home_section_even = "7D1128"
 
 [dark]
-  # Primary
-  primary = "#bbdefb"
-
-  link = "#bbdefb"
-  link_hover = "#bbdefb"
+  link = "7D1128"
+  link_hover = "7D1128"

@@ -1,6 +1,5 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: I am working as a research assistant at the Chair of Applied Statistics at Freie Universität Berlin and as a consultant for the statistical consulting unit fu:stat.
 education:
   courses:
   - course: PhD in Applied Statistics
@@ -48,11 +47,9 @@ social:
   icon_pack: fab
   link: https://www.linkedin.com/
 superuser: true
-title: Patrick Krennmair (帕特里克)
+title: Patrick Krennmair
 ---
 
-I have been working as a research assistant at the Chair of Applied Statistics at Freie Universität Berlin and as a consultant for the statistical consulting unit fu:stat since August 2019. After my bachelor degrees in Economics and Statistics at the University of Vienna, I obtained master degrees in Economics (2018) as well as in Development Studies (2019) also at the University of Vienna. Thematically and methodologically, I am interested in topics at the intersection of data and digitalization in the context of economic development.  
+I have been working as a research assistant at the Chair of Applied Statistics at Freie Universität Berlin and as a consultant for the statistical consulting unit fu:stat since August 2019. After my Bachelor degrees in Economics and Statistics at the University of Vienna, I obtained Master degrees in Economics (2018) as well as in Development Studies (2019) also at the University of Vienna. Thematically and methodologically, I am interested in topics at the intersection of data and digitalization in the context of economic development.  
 
 I am happy, if you would like to contact me for research ideas or potential projects.
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.

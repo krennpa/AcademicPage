@@ -7,7 +7,7 @@ address:
 all_day: true
 authors: []
 date: "2022-03-28T13:00:00Z"
-date_end: "2021-04-01T15:00:00Z"
+date_end: "2022-04-01T15:00:00Z"
 event: DAGStat Conference 2022
 event_url: https://www.dagstat2022.uni-hamburg.de/
 featured: false

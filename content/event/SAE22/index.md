@@ -7,7 +7,7 @@ address:
 all_day: true
 authors: []
 date: "2022-05-23T13:00:00Z"
-date_end: "2021-05-27T15:00:00Z"
+date_end: "2022-05-27T15:00:00Z"
 event: SAE 2022 - Small Area Estimation, Surveys and Data Science
 event_url: https://sae2022.org/
 featured: false

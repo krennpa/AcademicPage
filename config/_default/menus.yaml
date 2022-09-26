@@ -7,9 +7,6 @@ main:
   - name: About me
     url: '#about'
     weight: 10
-  - name: Posts
-    url: '#posts'
-    weight: 40
   - name: Talks
     url: '#talks'
     weight: 30
@@ -19,3 +16,6 @@ main:
   - name: Contact
     url: '#contact'
     weight: 50
+  - name: R package SAEforest
+    url: 'https://krennpa.github.io/SAEforest/index.html'
+    weight: 60

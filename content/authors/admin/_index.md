@@ -45,11 +45,11 @@ social:
   link: https://github.com/krennpa
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://cat-bounce.com/
 superuser: true
 title: Patrick Krennmair
 ---
 
 I am employed as a research assistant at the Chair of Applied Statistics at Freie Universität Berlin and as a consultant for the statistical consulting unit fu:stat since August 2019. After my Bachelor degrees in Economics and Statistics at the University of Vienna, I obtained Master degrees in Economics (2018) as well as in Development Studies (2019) also at the University of Vienna. Thematically and methodologically, I am interested in topics at the intersection of data and digitalization in the context of economic development.  
 
-I am happy, if you would like to contact me for research ideas or potential projects.
+Please do not hesitate to contact me for research ideas or potential projects.

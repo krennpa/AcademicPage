@@ -12,14 +12,14 @@ headless: true
 # Order that this section appears on the page.
 weight: 10
 
-title: Successfull Defense of my PhD-Thesis
+title: Successful Defense of my PhD-Thesis
 subtitle: On 19.12.2022
 
 design:
   columns: "1"
   background:
     image: code-books.jpg
-    image_darken: 0.8
+    image_darken: 0.6
     image_parallax: true
     image_position: center
     image_size: cover

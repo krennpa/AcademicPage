@@ -47,7 +47,7 @@ social:
   icon_pack: fab
   link: https://cat-bounce.com/
 superuser: true
-title: Patrick Krennmair
+title: Dr. Patrick Krennmair
 ---
 
 I currently work as a research associate and statistical consultant for Freie Universität Berlin. After the defense of my doctoral thesis, I am interested to face new challenges. My focus on statistical and algorithmic methods enables me to address a broad range of data-specific problems from numerous scientific disciplines. My previous education and research followed my general interest in predictive analytics for topics of digital transformation and international (economic) development. Professionally, I gained experience in statistical consulting for researchers and companies. Overall, I regard my interdisciplinary horizon, combined with my passion for data science, as a unique quality that complements any team.

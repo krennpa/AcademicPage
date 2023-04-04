@@ -3,7 +3,7 @@ abstract: This paper promotes the use of random forests as versatile tools for e
 authors:
 - admin
 - Timo Schmid
-date: "2022-03-27"
+date: "2022-10-02"
 doi: ""
 featured: true
 image:
@@ -11,14 +11,14 @@ image:
   focal_point: ""
   preview_only: false
 links:
-publication: In *ArchiveX*
-publication_short: In *Working Paper*
+publication: In *Journal of the Royal Statistical Society Series C (Applied Statistics)*
+publication_short: In *Journal of the Royal Statistical Society*
 publication_types:
-- "3"
-publishDate: "2022-01-26"
+- "2"
+publishDate: "2022-10-02"
 summary: This paper promotes the use of random forests as versatile tools for estimating spatially disaggregated indicators in the presence of small area-specific sample sizes.
 tags:
 - Small Area Estimation
 title: Flexible domain prediction using mixed effects random forests
-url_pdf: https://arxiv.org/pdf/2201.10933.pdf
+url_pdf: https://rss.onlinelibrary.wiley.com/doi/10.1111/rssc.12600
 ---

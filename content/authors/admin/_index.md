@@ -1,10 +1,10 @@
 ---
-bio: I am working as a research assistant at the Chair of Applied Statistics at Freie Universität Berlin and as a consultant for the statistical consulting unit fu:stat.
+bio: I am working as a research associate at the Chair of Applied Statistics at Freie Universität Berlin and as a consultant for the statistical consulting unit fu:stat.
 education:
   courses:
-  - course: PhD in Applied Statistics
+  - course: Dr.rer.pol. in Applied Statistics
     institution: Freie Universität Berlin
-    year: (2019 - now)
+    year: (2019 - 2022)
   - course: MSc in Economics
     institution: Universität Wien
     year: (2016 - 2018)
@@ -20,13 +20,13 @@ education:
 email: ""
 highlight_name: true
 interests:
-- Methods of Machine Learning
+- Predictive Methods of Machine Learning
 - Inequality and Poverty Indicators
 - Small Area Estimation
 organizations:
 - name: Freie Universität Berlin
   url: https://www.fu-berlin.de/
-role: PhD candidate in Applied Statistics
+role: Research Associate in Applied Statistics
 social:
 - icon: envelope
   icon_pack: fas
@@ -50,6 +50,6 @@ superuser: true
 title: Patrick Krennmair
 ---
 
-I am employed as a research assistant at the Chair of Applied Statistics at Freie Universität Berlin and as a consultant for the statistical consulting unit fu:stat since August 2019. After my Bachelor degrees in Economics and Statistics at the University of Vienna, I obtained Master degrees in Economics (2018) as well as in Development Studies (2019) also at the University of Vienna. Thematically and methodologically, I am interested in topics at the intersection of data and digitalization in the context of economic development.  
+I currently work as a research associate and statistical consultant for Freie Universität Berlin. After the defense of my doctoral thesis, I am interested to face new challenges. My focus on statistical and algorithmic methods enables me to address a broad range of data-specific problems from numerous scientific disciplines. My previous education and research followed my general interest in predictive analytics for topics of digital transformation and international (economic) development. Professionally, I gained experience in statistical consulting for researchers and companies. Overall, I regard my interdisciplinary horizon, combined with my passion for data science, as a unique quality that complements any team.
 
 Please do not hesitate to contact me for research ideas or potential projects.

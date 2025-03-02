@@ -20,13 +20,16 @@ education:
 email: ""
 highlight_name: true
 interests:
-- Predictive Methods of Machine Learning
-- Inequality and Poverty Indicators
+- Generative AI
+- Predictive Methods and Machine Learning
+- Applied Econometrics and Computational Statistics
+- Emerging Markets and Economic Development
+- Digital Transformation
 - Small Area Estimation
 organizations:
-- name: Freie Universität Berlin
-  url: https://www.fu-berlin.de/
-role: Research Associate in Applied Statistics
+- name: Current Employer - Accenture
+  url: https://www.accenture.com/at-de
+role: Data Science Consultant
 social:
 - icon: envelope
   icon_pack: fas
@@ -39,17 +42,17 @@ social:
   link: https://twitter.com/PK_unoffical
 - icon: graduation-cap
   icon_pack: fas
-  link: https://www.stat.fu-berlin.de/mitarbeiterliste/Krennmair/index.html
+  link: https://www.fu-berlin.de/
 - icon: github
   icon_pack: fab
-  link: https://github.com/krennpa
+  link: https://cat-bounce.com/
 - icon: linkedin
   icon_pack: fab
-  link: https://cat-bounce.com/
+  link: https://www.linkedin.com/in/patrick-krennmair/
 superuser: true
 title: Dr. Patrick Krennmair
 ---
 
-I currently work as a research associate and statistical consultant for Freie Universität Berlin. After the defense of my doctoral thesis, I am interested to face new challenges. My focus on statistical and algorithmic methods enables me to address a broad range of data-specific problems from numerous scientific disciplines. My previous education and research followed my general interest in predictive analytics for topics of digital transformation and international (economic) development. Professionally, I gained experience in statistical consulting for researchers and companies. Overall, I regard my interdisciplinary horizon, combined with my passion for data science, as a unique quality that complements any team.
+Experienced Data Scientist and Applied Researcher with a strong background in Machine Learning, Generative AI, Economics, and Predictive Analytics. Expertise in Statistical Modeling, Geo-Spatial Statistics, Simulations, and AI-driven solutions for Finance, Health, and Economic Development. Proven ability to lead teams, develop scalable AI-Solutions, and drive research initiatives.
 
-Please do not hesitate to contact me for research ideas or potential projects.
+As a Data Science Consultant in the private sector, I'm now more focused on Generative AI applications and spend less time on research. Nevertheless, please do not hesitate to contact me for research ideas or potential research projects.

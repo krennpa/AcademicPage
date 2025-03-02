@@ -23,14 +23,14 @@ twitter: ''
 #email: patrick.krennmair@fu-berlin.de
 #phone: 888 888 88 88
 address:
-  street: Garystr. 21 
-  city: Berlin
-  postcode: '14059'
-  country: Germany
-  country_code: DE
+#  street: Schottenring 
+  city: Wien
+  postcode: '1130'
+  country: Austria
+  country_code: AT
 coordinates:
-  latitude: '52.44717'
-  longitude: '13.2810'
+  latitude: '48.18268010416'
+  longitude: '16.311026083986'
 office_hours:
   - '..our work is never over'
 contact_links:

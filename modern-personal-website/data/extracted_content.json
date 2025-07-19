@@ -1,0 +1,251 @@
+{
+  "author": {
+    "bio": "I am working as a research associate at the Chair of Applied Statistics at Freie Universität Berlin and as a consultant for the statistical consulting unit fu:stat.",
+    "education": {
+      "courses": [
+        {
+          "course": "Dr.rer.pol. in Applied Statistics",
+          "institution": "Freie Universität Berlin",
+          "year": "(2019 - 2022)"
+        },
+        {
+          "course": "MSc in Economics",
+          "institution": "Universität Wien",
+          "year": "(2016 - 2018)"
+        },
+        {
+          "course": "MA in Development Studies",
+          "institution": "Universität Wien",
+          "year": "(2016 - 2019)"
+        },
+        {
+          "course": "BSc in Statistics",
+          "institution": "Universität Wien",
+          "year": "(2015 - 2018)"
+        },
+        {
+          "course": "BSc in Economics",
+          "institution": "Universität Wien",
+          "year": "(2013 - 2016)"
+        }
+      ]
+    },
+    "email": "",
+    "highlight_name": true,
+    "interests": [
+      "Generative AI",
+      "Predictive Methods and Machine Learning",
+      "Applied Econometrics and Computational Statistics",
+      "Emerging Markets and Economic Development",
+      "Digital Transformation",
+      "Small Area Estimation"
+    ],
+    "organizations": [
+      {
+        "name": "Current Employer - Accenture",
+        "url": "https://www.accenture.com/at-de"
+      }
+    ],
+    "role": "Data Science Consultant",
+    "social": [
+      {
+        "icon": "envelope",
+        "icon_pack": "fas",
+        "link": "/#contact"
+      },
+      {
+        "display": {
+          "header": true
+        },
+        "icon": "twitter",
+        "icon_pack": "fab",
+        "label": "Follow me on Twitter",
+        "link": "https://twitter.com/PK_unoffical"
+      },
+      {
+        "icon": "graduation-cap",
+        "icon_pack": "fas",
+        "link": "https://www.fu-berlin.de/"
+      },
+      {
+        "icon": "github",
+        "icon_pack": "fab",
+        "link": "https://cat-bounce.com/"
+      },
+      {
+        "icon": "linkedin",
+        "icon_pack": "fab",
+        "link": "https://www.linkedin.com/in/patrick-krennmair/"
+      }
+    ],
+    "superuser": true,
+    "title": "Dr. Patrick Krennmair"
+  },
+  "publications": [
+    {
+      "abstract": "Reliable estimators of the spatial distribution of socio-economic indicators are essential for evidence-based policy-making. As the accuracy of direct estimates from survey data decrease with spatially finer target levels, small area estimation approaches are promising. In this article, we outline new approaches that combine small area methodology with machine learning methods. The presented semi-parametric approach is promising as it avoids the assumptions of linear mixed models in contrast to classical small area models and builds on random forests. These tree-based machine learning predictors have the advantage of robustness against outliers and implicit model-selection. As for classical small area models, we account for hierarchically dependent data. We present point estimators applicable to full as well as aggregated auxiliary data access and outline their uncertainty measure. We compare methods based on a reproducible and illustrative example using open-source income data from Austria.",
+      "authors": [
+        "admin",
+        "Nora Würz",
+        "Timo Schmid"
+      ],
+      "date": "2022-07-01",
+      "doi": "",
+      "featured": true,
+      "image": {
+        "caption": "Image credit:[**Krennmair etal.**](http://isi-iass.org/home/services/the-survey-statistician/)",
+        "focal_point": "",
+        "preview_only": false
+      },
+      "links": null,
+      "publication": "In *The Survey Statistician:Emerging Methods*",
+      "publication_short": "In *Working Paper*",
+      "publication_types": [
+        "2"
+      ],
+      "publishDate": "2022-07-01",
+      "summary": "This paper discusses current developments and emerging methods for official statistics concerning the use of random forests for poverty mapping and small area estimation.",
+      "tags": [
+        "Small Area Estimation",
+        "Random Forest",
+        "Mixed Effects Random Forest",
+        "Official Statistics"
+      ],
+      "title": "Tree-Based Machine Learning in Small Area Estimation",
+      "url_pdf": "http://isi-iass.org/home/wp-content/uploads/Survey_Statistician_2022_July_N86_03.pdf"
+    },
+    {
+      "abstract": "This paper promotes the use of random forests as versatile tools for estimating spatially disaggregated indicators in the presence of small area-specific sample sizes. Small area estimators are predominantly conceptualized within the regression-setting and rely on linear mixed models to account for the hierarchical structure of the survey data. In contrast, machine learning methods offer non-linear and non-parametric alternatives, combining excellent predictive performance and a reduced risk of model-misspecification. Mixed effects random forests combine advantages of regression forests with the ability to model hierarchical dependencies. This paper provides a coherent framework based on mixed effects random forests for estimating small area averages and proposes a non-parametric bootstrap estimator for assessing the uncertainty of the estimates. We illustrate advantages of our proposed methodology using Mexican income-data from the state Nuevo León. Finally, the methodology is evaluated in model-based and design-based simulations comparing the proposed methodology to traditional regression-based approaches for estimating small area averages.",
+      "authors": [
+        "admin",
+        "Timo Schmid"
+      ],
+      "date": "2022-10-02",
+      "doi": "",
+      "featured": true,
+      "image": {
+        "caption": "Image credit: [**Krennmair & Schmid**](https://arxiv.org/abs/2201.10933)",
+        "focal_point": "",
+        "preview_only": false
+      },
+      "links": null,
+      "publication": "In *Journal of the Royal Statistical Society Series C (Applied Statistics)*",
+      "publication_short": "In *Journal of the Royal Statistical Society*",
+      "publication_types": [
+        "2"
+      ],
+      "publishDate": "2022-10-02",
+      "summary": "This paper promotes the use of random forests as versatile tools for estimating spatially disaggregated indicators in the presence of small area-specific sample sizes.",
+      "tags": [
+        "Small Area Estimation"
+      ],
+      "title": "Flexible domain prediction using mixed effects random forests",
+      "url_pdf": "https://rss.onlinelibrary.wiley.com/doi/10.1111/rssc.12600"
+    },
+    {
+      "abstract": "Reliable estimators of the spatial distribution of socio-economic indicators are essential for evidence-based policy-making. As sample sizes are small for highly disaggregated domains, the accuracy of the direct estimates is reduced. To overcome this problem small area estimation approaches are promising. In this work we propose a small area methodology using machine learning methods. The semi-parametric framework of mixed effects random forest combines the advantages of random forests (robustness against outliers and implicit model-selection) with the ability to model hierarchical dependencies. Existing random forest-based methods require access to auxiliary information on population-level. We present a methodology that deals with the lack of population micro-data. Our strategy adaptively incorporates aggregated auxiliary information through calibration-weights - based on empirical likelihood - for the estimation of area-level means. In addition to our point estimator, we provide a non-parametric bootstrap estimator measuring its uncertainty. The performance of the proposed point estimator and its uncertainty measure is studied in model-based simulations. Finally, the proposed methodology is applied to the 2011 Socio-Economic Panel and aggregate census information from the same year to estimate the average opportunity cost of care work for 96 regional planning regions in Germany.",
+      "authors": [
+        "admin",
+        "Nora Würz",
+        "Timo Schmid"
+      ],
+      "date": "2022-04-22",
+      "doi": "",
+      "featured": true,
+      "image": {
+        "caption": "Image credit: [**Krennmair et al.**](https://arxiv.org/abs/2204.10736)",
+        "focal_point": "",
+        "preview_only": false
+      },
+      "links": null,
+      "publication": "In *ArchiveX*",
+      "publication_short": "In *Working Paper*",
+      "publication_types": [
+        "3"
+      ],
+      "publishDate": "2022-04-22",
+      "summary": "This paper promotes the use of mixed effects random forests for estimating domain-specific averages in the presence of small sample sizes and under limited auxilliary information.",
+      "tags": [
+        "Small Area Estimation",
+        "Random Forest"
+      ],
+      "title": "Analysing Opportunity Cost of Care Work using Mixed Effects Random Forests under Aggregated Census Data",
+      "url_pdf": "https://arxiv.org/pdf/2204.10736.pdf"
+    }
+  ],
+  "projects": [
+    {
+      "date": "2016-04-27T00:00:00Z",
+      "external_link": "http://example.org",
+      "image": {
+        "caption": "Photo by Toa Heftiba on Unsplash",
+        "focal_point": "Smart"
+      },
+      "summary": "An example of linking directly to an external project website using `external_link`.",
+      "tags": [
+        "Demo"
+      ],
+      "title": "External Project"
+    },
+    {
+      "date": "2016-04-27T00:00:00Z",
+      "external_link": "",
+      "image": {
+        "caption": "Photo by rawpixel on Unsplash",
+        "focal_point": "Smart"
+      },
+      "links": [
+        {
+          "icon": "twitter",
+          "icon_pack": "fab",
+          "name": "Follow",
+          "url": "https://twitter.com/georgecushen"
+        }
+      ],
+      "slides": "example",
+      "summary": "An example of using the in-built project page.",
+      "tags": [
+        "Deep Learning"
+      ],
+      "title": "Internal Project",
+      "url_code": "",
+      "url_pdf": "",
+      "url_slides": "",
+      "url_video": ""
+    }
+  ],
+  "experience": {
+    "active": false,
+    "widget": "experience",
+    "headless": true,
+    "weight": 40,
+    "title": "Experience",
+    "subtitle": null,
+    "date_format": "Jan 2006",
+    "experience": [
+      {
+        "title": "CEO",
+        "company": "GenCoin",
+        "company_url": "",
+        "company_logo": "org-gc",
+        "location": "California",
+        "date_start": "2021-01-01",
+        "date_end": "",
+        "description": "  Responsibilities include:\n  \n  * Analysing\n  * Modelling\n  * Deploying\n  "
+      },
+      {
+        "title": "Professor of Semiconductor Physics",
+        "company": "University X",
+        "company_url": "",
+        "company_logo": "org-x",
+        "location": "California",
+        "date_start": "2016-01-01",
+        "date_end": "2020-12-31",
+        "description": "Taught electronic engineering and researched semiconductor physics."
+      }
+    ],
+    "design": {
+      "columns": "2"
+    }
+  }
+}

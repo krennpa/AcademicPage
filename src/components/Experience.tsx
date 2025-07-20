@@ -79,7 +79,7 @@ export default function Experience() {
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex-1">
                     <div className="flex items-center mb-2">
-                      <Briefcase className="w-5 h-5 text-red-700 dark:text-red-400 mr-2" />
+                      <Briefcase className="w-5 h-5 text-custom-green-700 dark:text-custom-green-400 mr-2" />
                       <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                         {exp.title}
                       </h3>
@@ -91,7 +91,7 @@ export default function Experience() {
                     </div>
                     <div className="flex items-center mb-2">
                       <Building className="w-4 h-4 text-gray-500 dark:text-gray-400 mr-2" />
-                      <span className="text-lg font-medium text-red-700 dark:text-red-400">
+                      <span className="text-lg font-medium text-custom-green-700 dark:text-custom-green-400">
                         {exp.company}
                       </span>
                       {exp.url && (
@@ -99,7 +99,7 @@ export default function Experience() {
                           href={exp.url} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="ml-2 text-gray-400 hover:text-red-700 dark:hover:text-red-400 transition-colors"
+                          className="ml-2 text-gray-400 hover:text-custom-green-700 dark:hover:text-custom-green-400 transition-colors"
                         >
                           <ExternalLink className="w-4 h-4" />
                         </a>
@@ -131,7 +131,7 @@ export default function Experience() {
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {exp.highlights.map((highlight, idx) => (
                       <li key={idx} className="flex items-start">
-                        <span className="w-1.5 h-1.5 bg-red-700 dark:bg-red-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                        <span className="w-1.5 h-1.5 bg-custom-green-700 dark:bg-custom-green-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                         <span className="text-gray-600 dark:text-gray-300 text-sm">
                           {highlight}
                         </span>
@@ -159,7 +159,7 @@ export default function Experience() {
                   {skillGroup.skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="inline-block bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 px-3 py-1 rounded-full text-sm mr-2 mb-2"
+                      className="inline-block bg-custom-green-100 dark:bg-custom-green-900/30 text-custom-green-800 dark:text-custom-green-300 px-3 py-1 rounded-full text-sm mr-2 mb-2"
                     >
                       {skill}
                     </span>

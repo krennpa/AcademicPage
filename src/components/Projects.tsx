@@ -99,9 +99,9 @@ export default function Projects() {
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
             {featuredProjects.map((project, index) => (
-              <div key={index} className="bg-gradient-to-br from-red-50 to-rose-50 dark:from-gray-800 dark:to-red-900/20 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-gradient-to-br from-custom-green-50 to-green-50 dark:from-gray-800 dark:to-custom-green-900/20 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300 rounded-full text-sm font-medium">
+                  <span className="px-3 py-1 bg-custom-green-100 dark:bg-custom-green-900/50 text-custom-green-800 dark:text-custom-green-300 rounded-full text-sm font-medium">
                     {project.category}
                   </span>
                   <div className="flex items-center text-gray-500 dark:text-gray-400">
@@ -130,7 +130,7 @@ export default function Projects() {
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
-                      className="flex items-center text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 font-medium"
+                      className="flex items-center text-custom-green-700 dark:text-custom-green-400 hover:text-custom-green-800 dark:hover:text-custom-green-300 font-medium"
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Live Demo
@@ -159,7 +159,7 @@ export default function Projects() {
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 selectedCategory === category
-                  ? 'bg-red-800 text-white'
+                  ? 'bg-custom-green-800 text-white'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
               }`}
             >
@@ -181,7 +181,7 @@ export default function Projects() {
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="px-2 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 rounded text-xs font-medium">
+                  <span className="px-2 py-1 bg-custom-green-100 dark:bg-custom-green-900/30 text-custom-green-800 dark:text-custom-green-300 rounded text-xs font-medium">
                     {project.category}
                   </span>
                   <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -189,7 +189,7 @@ export default function Projects() {
                   </span>
                 </div>
                 
-                <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-red-700 dark:group-hover:text-red-400 transition-colors">
+                <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-custom-green-700 dark:group-hover:text-custom-green-400 transition-colors">
                   {project.title}
                 </h4>
                 
@@ -214,7 +214,7 @@ export default function Projects() {
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
-                      className="flex items-center text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 text-sm font-medium"
+                      className="flex items-center text-custom-green-700 dark:text-custom-green-400 hover:text-custom-green-800 dark:hover:text-custom-green-300 text-sm font-medium"
                     >
                       <ExternalLink className="w-3 h-3 mr-1" />
                       Demo
@@ -237,7 +237,7 @@ export default function Projects() {
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-                    <div className="bg-gradient-to-br from-red-50 via-white to-rose-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/30 rounded-2xl p-8">
+                    <div className="bg-gradient-to-br from-custom-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-custom-green-900/30 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Interested in Collaboration?
             </h3>
@@ -246,7 +246,7 @@ export default function Projects() {
             </p>
             <button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-red-800 hover:bg-red-900 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl"
+              className="bg-custom-green-800 hover:bg-custom-green-900 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl"
             >
               Get In Touch
             </button>

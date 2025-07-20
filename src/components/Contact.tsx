@@ -123,7 +123,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-red-700 focus:border-transparent outline-none text-gray-900 dark:text-white transition-colors"
+                        className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-custom-green-700 focus:border-transparent outline-none text-gray-900 dark:text-white transition-colors"
                         placeholder="Your name"
                       />
                     </div>
@@ -138,7 +138,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-red-700 focus:border-transparent outline-none text-gray-900 dark:text-white transition-colors"
+                        className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-custom-green-700 focus:border-transparent outline-none text-gray-900 dark:text-white transition-colors"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -169,14 +169,14 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-red-700 focus:border-transparent outline-none text-gray-900 dark:text-white transition-colors resize-y"
+                      className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-custom-green-700 focus:border-transparent outline-none text-gray-900 dark:text-white transition-colors resize-y"
                       placeholder="Tell me about your project or how I can help..."
                     ></textarea>
                   </div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-red-800 hover:bg-red-900 disabled:bg-red-400 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
+                    className="w-full bg-custom-green-800 hover:bg-custom-green-900 disabled:bg-custom-green-400 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <>
@@ -219,7 +219,7 @@ export default function Contact() {
             </div>
 
             {/* Consultation Areas */}
-            <div className="bg-gradient-to-br from-red-50 via-white to-rose-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/30 rounded-2xl p-6">
+            <div className="bg-gradient-to-br from-custom-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-custom-green-900/30 rounded-2xl p-6">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Consultation Areas
               </h4>
@@ -235,7 +235,7 @@ export default function Contact() {
                   "Academic Projects"
                 ].map((area, index) => (
                   <div key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-red-700 dark:bg-red-400 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-custom-green-700 dark:bg-custom-green-400 rounded-full mr-3"></div>
                     <span className="text-gray-700 dark:text-gray-300 text-sm">
                       {area}
                     </span>

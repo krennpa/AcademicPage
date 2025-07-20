@@ -80,7 +80,7 @@ export default function About() {
                   key={index}
                   className="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 >
-                  <div className="flex-shrink-0 p-2 bg-red-100 dark:bg-red-900/30 rounded-lg text-red-700 dark:text-red-400">
+                  <div className="flex-shrink-0 p-2 bg-custom-green-100 dark:bg-custom-green-900/30 rounded-lg text-custom-green-700 dark:text-custom-green-400">
                     {interest.icon}
                   </div>
                   <div>
@@ -107,21 +107,21 @@ export default function About() {
                   key={index}
                   className={`p-6 rounded-xl border-l-4 ${
                     edu.highlight 
-                      ? 'bg-red-50 dark:bg-red-900/20 border-red-700' 
+                      ? 'bg-custom-green-50 dark:bg-custom-green-900/20 border-custom-green-700' 
                       : 'bg-gray-50 dark:bg-gray-800 border-gray-300 dark:border-gray-600'
                   } hover:shadow-md transition-shadow`}
                 >
                   <div className="flex items-start justify-between mb-2">
                     <h4 className={`text-lg font-semibold ${
                       edu.highlight 
-                        ? 'text-red-900 dark:text-red-100' 
+                        ? 'text-custom-green-900 dark:text-custom-green-100' 
                         : 'text-gray-900 dark:text-white'
                     }`}>
                       {edu.degree}
                     </h4>
                     <span className={`text-sm px-3 py-1 rounded-full ${
                       edu.highlight 
-                        ? 'bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200' 
+                        ? 'bg-custom-green-100 dark:bg-custom-green-900/50 text-custom-green-800 dark:text-custom-green-200' 
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
                     }`}>
                       {edu.year}
@@ -129,7 +129,7 @@ export default function About() {
                   </div>
                   <p className={`${
                     edu.highlight 
-                      ? 'text-red-700 dark:text-red-300' 
+                      ? 'text-custom-green-700 dark:text-custom-green-300' 
                       : 'text-gray-600 dark:text-gray-300'
                   }`}>
                     {edu.institution}
@@ -142,7 +142,7 @@ export default function About() {
 
         {/* Current Position */}
         <div className="mt-16 text-center">
-                    <div className="bg-gradient-to-br from-red-50 via-white to-rose-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/30 rounded-2xl p-8">
+                    <div className="bg-gradient-to-br from-custom-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-custom-green-900/30 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Current Position
             </h3>

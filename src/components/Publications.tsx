@@ -92,7 +92,7 @@ export default function Publications() {
       case 'Published':
         return 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300'
       case 'Accepted':
-        return 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300'
+        return 'bg-custom-green-100 dark:bg-custom-green-900/30 text-custom-green-800 dark:text-custom-green-300'
       case 'Under Review':
         return 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300'
       default:
@@ -123,7 +123,7 @@ export default function Publications() {
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex-1">
                     <div className="flex items-center mb-3">
-                      <BookOpen className="w-5 h-5 text-red-700 dark:text-red-400 mr-2" />
+                      <BookOpen className="w-5 h-5 text-custom-green-700 dark:text-custom-green-400 mr-2" />
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(pub.status)}`}>
                         {pub.status}
                       </span>
@@ -173,7 +173,7 @@ export default function Publications() {
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {pub.keywords.map((keyword, idx) => (
-                    <span key={idx} className="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 rounded-full text-sm">
+                    <span key={idx} className="px-3 py-1 bg-custom-green-100 dark:bg-custom-green-900/30 text-custom-green-800 dark:text-custom-green-300 rounded-full text-sm">
                       {keyword}
                     </span>
                   ))}
@@ -183,7 +183,7 @@ export default function Publications() {
                   {pub.pdfUrl && (
                     <a
                       href={pub.pdfUrl}
-                      className="flex items-center text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 font-medium"
+                      className="flex items-center text-custom-green-700 dark:text-custom-green-400 hover:text-custom-green-800 dark:hover:text-custom-green-300 font-medium"
                     >
                       <FileText className="w-4 h-4 mr-2" />
                       PDF
@@ -214,7 +214,7 @@ export default function Publications() {
               onClick={() => setSelectedType(type)}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 selectedType === type
-                  ? 'bg-red-800 text-white'
+                  ? 'bg-custom-green-800 text-white'
                   : 'bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
               }`}
             >
@@ -304,7 +304,7 @@ export default function Publications() {
         {/* Research Metrics */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white dark:bg-gray-900 rounded-xl p-6 text-center shadow-lg">
-            <div className="text-3xl font-bold text-red-700 dark:text-red-400 mb-2">
+            <div className="text-3xl font-bold text-custom-green-700 dark:text-custom-green-400 mb-2">
               {publications.length}
             </div>
             <div className="text-gray-600 dark:text-gray-400">

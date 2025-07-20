@@ -142,7 +142,7 @@ export default function About() {
 
         {/* Current Position */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8">
+                    <div className="bg-gradient-to-br from-red-50 via-white to-rose-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/30 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Current Position
             </h3>

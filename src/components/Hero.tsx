@@ -43,12 +43,12 @@ export default function Hero() {
           {/* Content - Right Side */}
           <div className="text-center lg:text-left">
             {/* Main Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-2 leading-tight">
               Patrick Krennmair
             </h1>
 
             {/* Role */}
-            <div className="flex items-center justify-center lg:justify-start mb-6">
+            <div className="flex items-center justify-center lg:justify-start mb-4">
               <Briefcase className="w-5 h-5 text-red-700 dark:text-red-400 mr-2" />
               <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 font-medium">
                 Data Science Consultant
@@ -56,7 +56,7 @@ export default function Hero() {
             </div>
 
             {/* Location */}
-            <div className="flex items-center justify-center lg:justify-start mb-8">
+            <div className="flex items-center justify-center lg:justify-start mb-4">
               <MapPin className="w-4 h-4 text-gray-500 dark:text-gray-400 mr-2" />
               <p className="text-gray-600 dark:text-gray-400">
                 Vienna, Austria

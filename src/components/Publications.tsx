@@ -119,7 +119,7 @@ export default function Publications() {
           </h3>
           <div className="space-y-8">
             {featuredPublications.map((pub, index) => (
-              <div key={index} className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-800 hover:border-custom-green-200 dark:hover:border-custom-green-800">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
                   <div className="flex-1">
                     <div className="flex items-center mb-3">
@@ -212,10 +212,10 @@ export default function Publications() {
             <button
               key={type}
               onClick={() => setSelectedType(type)}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                 selectedType === type
-                  ? 'bg-custom-green-800 text-white'
-                  : 'bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                  ? 'bg-custom-green-500 text-white shadow-lg'
+                  : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-custom-green-50 dark:hover:bg-custom-green-900/20 hover:text-custom-green-600 dark:hover:text-custom-green-400'
               }`}
             >
               {type}

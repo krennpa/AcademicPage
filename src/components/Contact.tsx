@@ -93,14 +93,14 @@ export default function Contact() {
         <div className="grid lg:grid-cols-5 gap-16 items-start">
           {/* Contact Form - Left Column (Wider) */}
           <div className="lg:col-span-3">
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 h-full">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 h-full shadow-sm border border-gray-100 dark:border-gray-800">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Send a Message
               </h3>
               {submitted ? (
                 <div className="text-center py-12">
-                  <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Send className="w-8 h-8 text-green-600 dark:text-green-400" />
+                  <div className="w-16 h-16 bg-custom-green-100 dark:bg-custom-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Send className="w-8 h-8 text-custom-green-600 dark:text-custom-green-400" />
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Message Sent!
@@ -169,14 +169,14 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-custom-green-700 focus:border-transparent outline-none text-gray-900 dark:text-white transition-colors resize-y"
+                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-custom-green-500 focus:border-custom-green-500 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none transition-all duration-200"
                       placeholder="Tell me about your project or how I can help..."
                     ></textarea>
                   </div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-custom-green-800 hover:bg-custom-green-900 disabled:bg-custom-green-400 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
+                    className="w-full bg-custom-green-500 hover:bg-custom-green-600 text-white py-3 px-6 rounded-xl font-medium transition-all duration-200 flex items-center justify-center shadow-lg hover:shadow-xl"
                   >
                     {isSubmitting ? (
                       <>

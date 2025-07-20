@@ -31,8 +31,24 @@ export default function Hero() {
               <div className="absolute -inset-2 bg-white dark:bg-gray-900 rounded-xl transform -rotate-1 shadow-lg"></div>
               
               {/* Photo Container */}
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 bg-gradient-to-br from-custom-green-800 to-custom-green-900 rounded-xl flex items-center justify-center text-white text-6xl sm:text-7xl font-bold shadow-2xl">
-                PK
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 bg-gradient-to-br from-custom-green-500 to-custom-green-600 rounded-2xl overflow-hidden shadow-2xl">
+                {/* Profile image from public directory */}
+                <img 
+                  src="/profile.jpg" 
+                  alt="Patrick Krennmair" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback to initials if image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fallback = target.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                {/* Fallback initials */}
+                <div className="absolute inset-0 flex items-center justify-center text-white text-6xl sm:text-7xl font-bold" style={{display: 'none'}}>
+                  PK
+                </div>
               </div>
               
               {/* Gallery-style accent */}

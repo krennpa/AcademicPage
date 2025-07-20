@@ -92,13 +92,13 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <button
                 onClick={scrollToAbout}
-                className="bg-custom-green-800 hover:bg-custom-green-900 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"
+                className="bg-custom-green-500 hover:bg-custom-green-600 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"
               >
                 Learn More About Me
               </button>
               <button
                 onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-custom-green-800 text-custom-green-800 dark:text-custom-green-400 dark:border-custom-green-400 hover:bg-custom-green-800 hover:text-white dark:hover:bg-custom-green-400 dark:hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-colors"
+                className="border-2 border-custom-green-500 text-custom-green-500 dark:text-custom-green-400 dark:border-custom-green-400 hover:bg-custom-green-500 hover:text-white dark:hover:bg-custom-green-500 dark:hover:text-white px-8 py-3 rounded-lg font-medium transition-colors"
               >
                 Get In Touch
               </button>

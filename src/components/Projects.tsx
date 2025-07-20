@@ -246,7 +246,7 @@ export default function Projects() {
             </p>
             <button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-custom-green-800 hover:bg-custom-green-900 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl"
+              className="bg-custom-green-500 hover:bg-custom-green-600 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl"
             >
               Get In Touch
             </button>

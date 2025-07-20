@@ -78,7 +78,7 @@ export default function About() {
               {interests.map((interest, index) => (
                 <div 
                   key={index}
-                  className="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  className="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gradient-to-r hover:from-custom-green-50 hover:to-green-50 dark:hover:from-gray-700 dark:hover:to-custom-green-900/30 transition-all duration-300 hover:shadow-lg"
                 >
                   <div className="flex-shrink-0 p-2 bg-custom-green-100 dark:bg-custom-green-900/30 rounded-lg text-custom-green-700 dark:text-custom-green-400">
                     {interest.icon}
@@ -107,9 +107,9 @@ export default function About() {
                   key={index}
                   className={`p-6 rounded-xl border-l-4 ${
                     edu.highlight 
-                      ? 'bg-custom-green-50 dark:bg-custom-green-900/20 border-custom-green-700' 
-                      : 'bg-gray-50 dark:bg-gray-800 border-gray-300 dark:border-gray-600'
-                  } hover:shadow-md transition-shadow`}
+                      ? 'bg-custom-green-50 dark:bg-custom-green-900/20 border-custom-green-400 hover:bg-gradient-to-r hover:from-custom-green-100 hover:to-green-100 dark:hover:from-custom-green-900/30 dark:hover:to-custom-green-900/20' 
+                      : 'bg-gray-50 dark:bg-gray-800 border-custom-green-200 dark:border-custom-green-300 hover:bg-gradient-to-r hover:from-custom-green-50 hover:to-green-50 dark:hover:from-gray-700 dark:hover:to-custom-green-900/20'
+                  } hover:shadow-lg transition-all duration-300`}
                 >
                   <div className="flex items-start justify-between mb-2">
                     <h4 className={`text-lg font-semibold ${

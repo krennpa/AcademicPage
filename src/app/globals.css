@@ -63,3 +63,61 @@
 .dark .bg-custom-green-100 {
   background-color: rgba(31, 61, 48, 0.3) !important;
 }
+
+/* Force buttons to be properly green */
+.bg-custom-green-500 {
+  background-color: #40826d !important;
+}
+
+.hover\:bg-custom-green-600:hover {
+  background-color: #367056 !important;
+}
+
+.border-custom-green-500 {
+  border-color: #40826d !important;
+}
+
+.text-custom-green-500 {
+  color: #40826d !important;
+}
+
+.hover\:bg-custom-green-500:hover {
+  background-color: #40826d !important;
+}
+
+/* Ensure button text is readable */
+button.bg-custom-green-500 {
+  background-color: #40826d !important;
+  color: white !important;
+}
+
+button.bg-custom-green-500:hover {
+  background-color: #367056 !important;
+  color: white !important;
+}
+
+/* Force light green borders for About section */
+.border-custom-green-400 {
+  border-color: #5bb882 !important;
+}
+
+.border-custom-green-200 {
+  border-color: #b8e6c8 !important;
+}
+
+.border-custom-green-300 {
+  border-color: #8dd5a7 !important;
+}
+
+/* Ensure borders are visible and light green */
+.border-l-4.border-custom-green-400 {
+  border-left-color: #5bb882 !important;
+}
+
+.border-l-4.border-custom-green-200 {
+  border-left-color: #b8e6c8 !important;
+}
+
+.dark .border-custom-green-300 {
+  border-color: #8dd5a7 !important;
+}

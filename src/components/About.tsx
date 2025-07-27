@@ -147,8 +147,8 @@ export default function About() {
               Current Position
             </h3>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">
-              <span className="font-semibold">Data Science Consultant</span> at 
-              <span className="text-red-700 dark:text-red-400 font-semibold"> Accenture</span>
+              <span className="font-semibold">Senior Data Scientist and Team Lead</span> at 
+              <span className="text-blue-500 dark:text-blue-700 dark:text-green-400 font-semibold"> Dynatrace</span>
             </p>
             <p className="text-gray-600 dark:text-gray-400">
               Combining statistical expertise with business consulting to drive digital transformation

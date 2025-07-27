@@ -3,6 +3,7 @@
 import { Mail, MapPin, Twitter, Linkedin, Send, Phone, Clock } from 'lucide-react'
 import { useState } from 'react'
 
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -24,23 +25,57 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission (replace with actual form handling)
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setSubmitted(true)
-    setIsSubmitting(false)
-    setFormData({ name: '', email: '', subject: '', message: '' })
-    
-    // Reset submitted state after 3 seconds
-    setTimeout(() => setSubmitted(false), 3000)
+    try {
+      // Google Cloud Functions integration
+      // TODO: Replace with your actual Cloud Function URL after deployment
+      const CLOUD_FUNCTION_URL = process.env.NEXT_PUBLIC_CLOUD_FUNCTION_URL || 'YOUR_CLOUD_FUNCTION_URL';
+      
+      const response = await fetch(CLOUD_FUNCTION_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to: 'p.krennmair@gmail.com'
+        })
+      })
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      
+      const result = await response.json()
+      console.log('Email sent successfully via GCP:', result)
+      
+      // Temporary simulation - remove this line after deploying Cloud Function
+      if (CLOUD_FUNCTION_URL === 'YOUR_CLOUD_FUNCTION_URL') {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        console.log('⚠️ Using simulation mode. Deploy Cloud Function and update NEXT_PUBLIC_CLOUD_FUNCTION_URL');
+      }
+      
+      setSubmitted(true)
+      setFormData({ name: '', email: '', subject: '', message: '' })
+      
+      // Reset submitted state after 3 seconds
+      setTimeout(() => setSubmitted(false), 3000)
+    } catch (error) {
+      console.error('Failed to send message:', error)
+      alert('Failed to send message. Please try again or contact me directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
     {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
-      value: "patrick.krennmair@example.com",
-      href: "mailto:patrick.krennmair@example.com"
+      value: "p.krennmair@gmail.com",
+      href: "mailto:p.krennmair@gmail.com"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
@@ -72,7 +107,7 @@ export default function Contact() {
     {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
-      href: "mailto:patrick.krennmair@example.com",
+      href: "mailto:p.krennmair@gmail.com",
       color: "hover:text-green-500"
     }
   ]

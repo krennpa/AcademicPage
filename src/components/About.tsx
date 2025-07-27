@@ -2,6 +2,7 @@
 
 import { GraduationCap, Brain, TrendingUp, Globe } from 'lucide-react'
 
+
 export default function About() {
   const interests = [
     {
@@ -58,20 +59,12 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            About Me
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I am working as a research associate at the Chair of Applied Statistics at Freie Universität Berlin 
-            and as a consultant for the statistical consulting unit fu:stat.
-          </p>
-        </div>
+
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Interests */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+            <h3 className="text-2xl font-bold text-green-600 dark:text-green-400 mb-8">
               Research Interests
             </h3>
             <div className="grid gap-6">
@@ -98,7 +91,7 @@ export default function About() {
 
           {/* Right Column - Education */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+            <h3 className="text-2xl font-bold text-green-600 dark:text-green-400 mb-8">
               Education
             </h3>
             <div className="space-y-6">
@@ -140,21 +133,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Current Position */}
-        <div className="mt-16 text-center">
-                    <div className="bg-gradient-to-br from-custom-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-custom-green-900/30 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Current Position
-            </h3>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">
-              <span className="font-semibold">Senior Data Scientist and Team Lead</span> at 
-              <span className="text-blue-500 dark:text-blue-700 dark:text-green-400 font-semibold"> Dynatrace</span>
-            </p>
-            <p className="text-gray-600 dark:text-gray-400">
-              Combining statistical expertise with business consulting to drive digital transformation
-            </p>
-          </div>
-        </div>
+
       </div>
     </section>
   )

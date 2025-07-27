@@ -20,12 +20,12 @@ export default function Hero() {
   if (!mounted) return null
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-custom-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-900 dark:to-custom-green-900 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-custom-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-900 dark:to-custom-green-900 px-4 sm:px-6 lg:px-8 pt-24">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-12 items-center">
           {/* Profile Image - Left Side */}
-          <div className="flex justify-center lg:justify-start">
-            <div className="relative">
+          <div className="flex justify-center lg:col-span-1">
+            <div className="relative lg:-translate-y-8">
               {/* Minimalist Frame */}
               <div className="absolute -inset-4 bg-gradient-to-br from-custom-green-100 to-green-100 dark:from-gray-800 dark:to-custom-green-900/20 rounded-2xl transform rotate-1"></div>
               <div className="absolute -inset-2 bg-white dark:bg-gray-900 rounded-xl transform -rotate-1 shadow-lg"></div>
@@ -57,34 +57,33 @@ export default function Hero() {
           </div>
 
           {/* Content - Right Side */}
-          <div className="text-center lg:text-left">
+          <div className="lg:col-span-2 text-center lg:text-left">
             {/* Main Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-2 leading-tight">
-              Patrick Krennmair
+            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-2 leading-tight">
+              Dr. Patrick Krennmair
             </h1>
 
             {/* Role */}
             <div className="flex items-center justify-center lg:justify-start mb-4">
               <Briefcase className="w-5 h-5 text-custom-green-700 dark:text-custom-green-400 mr-2" />
               <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 font-medium">
-                Data Science Consultant
+                Senior Data Scientist and Researcher
               </p>
             </div>
 
             {/* Location */}
             <div className="flex items-center justify-center lg:justify-start mb-4">
-              <MapPin className="w-4 h-4 text-gray-500 dark:text-gray-400 mr-2" />
-              <p className="text-gray-600 dark:text-gray-400">
+              <MapPin className="w-4 h-4 text-green-500 dark:text-green-400 mr-2" />
+              <p className="text-green-600 dark:text-green-400">
                 Vienna, Austria
               </p>
             </div>
 
             {/* Bio */}
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Research associate specializing in <span className="text-custom-green-700 dark:text-custom-green-400 font-semibold">Generative AI</span>, 
-              <span className="text-custom-green-700 dark:text-custom-green-400 font-semibold"> Machine Learning</span>, and 
-              <span className="text-custom-green-700 dark:text-custom-green-400 font-semibold"> Applied Econometrics</span>. 
-              Currently working at Accenture and passionate about digital transformation and emerging markets.
+            My background spans research, consulting, and team leadership at the intersection of technology and global development.
+            I began in academia, using geo-spatial machine learning to explore poverty and inequality. That foundation in digital transformation and international development still shapes how I think today.
+            Most recently, I’ve led teams working on generative AI. I bring an interdisciplinary mindset and a strong passion for AI to every project I take on.
             </p>
 
             {/* Key Interests */}
@@ -97,7 +96,7 @@ export default function Hero() {
               ].map((interest, index) => (
                 <span
                   key={index}
-                  className="px-4 py-2 bg-custom-green-100 dark:bg-custom-green-900/30 text-custom-green-800 dark:text-custom-green-300 rounded-full text-sm font-medium hover:bg-custom-green-200 dark:hover:bg-custom-green-900/50 transition-colors"
+                  className="px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm font-medium hover:bg-green-200 dark:hover:bg-green-900/50 transition-colors"
                 >
                   {interest}
                 </span>

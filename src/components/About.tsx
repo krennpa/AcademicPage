@@ -115,7 +115,7 @@ export default function About() {
                     <span className={`text-sm px-3 py-1 rounded-full ${
                       edu.highlight 
                         ? 'bg-custom-green-100 dark:bg-custom-green-900/50 text-custom-green-800 dark:text-custom-green-200' 
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+                        : 'bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300'
                     }`}>
                       {edu.year}
                     </span>

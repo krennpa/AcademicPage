@@ -4,8 +4,10 @@ import { Briefcase, Building, Calendar, ExternalLink } from 'lucide-react'
 import DynatraceLogo from './DynatraceLogo'
 import AccentureLogo from './AccentureLogo'
 import FUBLogo from './FUBLogo'
+import { useTheme } from '../hooks/useTheme'
 
 export default function Experience() {
+  const theme = useTheme();
   const pastExperiences = [
     {
       title: "PhD Researcher & Statistical Consultant",
@@ -28,10 +30,10 @@ export default function Experience() {
   ]
 
   const skills = [
-    { category: "Data Science", skills: ["Python", "R", "Machine Learning", "Deep Learning", "Statistical Modeling"] },
-    { category: "Analytics", skills: ["Econometrics", "Time Series Analysis", "Causal Inference", "A/B Testing"] },
-    { category: "AI/ML", skills: ["Generative AI", "NLP", "Computer Vision", "MLOps", "Model Deployment"] },
-    { category: "Tools", skills: ["SQL", "Git", "Docker", "Cloud Platforms", "Jupyter", "Tableau"] }
+    { category: "AI/ML & Advanced Analytics", skills: ["Generative AI", "Deep Learning", "Neural Networks", "Machine Learning", "Predictive Analytics", "Monte Carlo Simulation"] },
+    { category: "Programming & Data Engineering", skills: ["Python", "R", "Data Processing", "Data Engineering", "ETL Tools", "Big Data", "Scientific Programming"] },
+    { category: "Research & Statistical Methods", skills: ["Applied Research", "Statistical Data Analysis", "Geo-Spatial Statistics", "Data Modeling", "Data Visualization", "Economic Research"] },
+    { category: "Professional & Consulting", skills: ["Stakeholder Management", "Project Management", "Consultancy Services", "Public Speaking", "Scientific Writing", "University Teaching"] }
   ]
 
   return (
@@ -51,7 +53,9 @@ export default function Experience() {
           <div 
             className="rounded-2xl p-6 shadow-lg"
             style={{
-              background: 'linear-gradient(to bottom right, #bfdbfe, #f9fafb, #b8e6c8)',
+              background: theme === 'dark' 
+                ? 'linear-gradient(to bottom right, #1e3a8a, #1f2937, #14532d)' 
+                : 'linear-gradient(to bottom right, #bfdbfe, #f9fafb, #b8e6c8)',
             }}
           >
             <div className="flex flex-col md:flex-row gap-6 items-start">
@@ -62,7 +66,7 @@ export default function Experience() {
                 <div className="flex items-center justify-center md:justify-start mb-2">
                   <Briefcase className="w-5 h-5 text-custom-blue-500 dark:text-custom-blue-400 mr-2" />
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">Senior Data Scientist and Team Lead</h3>
-                  <span className="ml-3 px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-sm rounded-full">
+                  <span className="ml-3 px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 text-sm rounded-full">
                     Current
                   </span>
                 </div>
@@ -78,7 +82,7 @@ export default function Experience() {
                   <span>•</span>
                   <span>Vienna, Austria</span>
                   <span>•</span>
-                  <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">
+                  <span className="px-2 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-300 rounded">
                     Full-time
                   </span>
                 </div>
@@ -113,12 +117,14 @@ export default function Experience() {
           <div 
             className="rounded-2xl p-6 shadow-lg"
             style={{
-              background: 'linear-gradient(to bottom right, #e9d5ff, #f9fafb, #e9d5ff)',
+              background: theme === 'dark' 
+                ? 'linear-gradient(to bottom right, #6b7280, #374151, #5d6374)' 
+                : 'linear-gradient(to bottom right, #e5e7eb, #f9fafb, #d1d5db)',
             }}
           >
             <div className="flex flex-col md:flex-row gap-6 items-start">
               <div className="flex-shrink-0 mx-auto md:mx-0">
-                <AccentureLogo className="h-20 w-20" />
+                <AccentureLogo className="h-20 w-20 opacity-60 grayscale hover:opacity-80 hover:grayscale-0 transition-all duration-300" />
               </div>
               <div className="flex-1 text-center md:text-left">
                 <div className="flex items-center justify-center md:justify-start mb-2">
@@ -137,7 +143,7 @@ export default function Experience() {
                   <span>•</span>
                   <span>Vienna, Austria</span>
                   <span>•</span>
-                  <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">
+                  <span className="px-2 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-300 rounded">
                     Full-time
                   </span>
                 </div>
@@ -172,12 +178,14 @@ export default function Experience() {
           <div 
             className="rounded-2xl p-6 shadow-lg"
             style={{
-              background: 'linear-gradient(to bottom right, #dbeafe, #f9fafb, #dbeafe)',
+              background: theme === 'dark' 
+                ? 'linear-gradient(to bottom right, #5d6374, #374151, #4b5563)' 
+                : 'linear-gradient(to bottom right, #d1d5db, #f9fafb, #f3f4f6)',
             }}
           >
             <div className="flex flex-col md:flex-row gap-6 items-start">
               <div className="flex-shrink-0 mx-auto md:mx-0">
-                <FUBLogo className="h-20 w-20" />
+                <FUBLogo className="h-20 w-20 opacity-60 grayscale hover:opacity-80 hover:grayscale-0 transition-all duration-300" />
               </div>
               <div className="flex-1 text-center md:text-left">
                 <div className="flex items-center justify-center md:justify-start mb-2">
@@ -196,7 +204,7 @@ export default function Experience() {
                   <span>•</span>
                   <span>{pastExperiences[0].location}</span>
                   <span>•</span>
-                  <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">
+                  <span className="px-2 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-300 rounded">
                     {pastExperiences[0].type}
                   </span>
                 </div>
@@ -226,29 +234,125 @@ export default function Experience() {
 
         </div>
 
-        {/* Skills Section */}
+        {/* Skills Section - Bento Grid Layout */}
         <div className="mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            Technical Skills
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+            Technical Expertise
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skills.map((skillGroup, index) => (
-              <div key={index} className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                  {skillGroup.category}
-                </h4>
-                <div className="space-y-2">
-                  {skillGroup.skills.map((skill, idx) => (
-                    <span
-                      key={idx}
-                      className="inline-block bg-custom-green-100 dark:bg-custom-green-900/30 text-custom-green-800 dark:text-custom-green-300 px-3 py-1 rounded-full text-sm mr-2 mb-2"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+          
+          {/* Bento Grid Container - Balanced 2x2 Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            
+            {/* Top Row */}
+            {/* AI/ML & Advanced Analytics - Top Left */}
+            <div className="bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
+                    {skills[0].category}
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-300 text-xs">
+                    Core AI & Machine Learning
+                  </p>
+                </div>
+                <div className="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-lg flex items-center justify-center">
+                  <span className="text-lg text-gray-600 dark:text-gray-300">🤖</span>
                 </div>
               </div>
-            ))}
+              <div className="flex flex-wrap gap-2">
+                {skills[0].skills.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs font-medium shadow-sm hover:shadow-md transition-shadow border border-gray-300 dark:border-gray-600"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Programming & Data Engineering - Top Right */}
+            <div className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-lg text-gray-600 dark:text-gray-300">💻</span>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
+                    {skills[1].category}
+                  </h4>
+                  <p className="text-gray-500 dark:text-gray-400 text-xs">
+                    Languages & Infrastructure
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {skills[1].skills.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs mr-1 mb-1 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom Row */}
+            {/* Research & Statistical Methods - Bottom Left */}
+            <div className="bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-500 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-gray-400 dark:bg-gray-500 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-lg text-gray-600 dark:text-gray-300">📊</span>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
+                    {skills[2].category}
+                  </h4>
+                  <p className="text-gray-500 dark:text-gray-400 text-xs">
+                    Statistical Analysis
+                  </p>
+                </div>
+              </div>
+              <div className="space-y-1">
+                {skills[2].skills.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-block bg-gray-300 dark:bg-gray-500 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md text-xs mr-1 mb-1 hover:bg-gray-400 dark:hover:bg-gray-400 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Professional & Consulting - Bottom Right */}
+            <div className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 dark:from-gray-500 dark:via-gray-600 dark:to-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-gray-400 dark:bg-gray-500 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-lg text-gray-600 dark:text-gray-300">🎯</span>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
+                    {skills[3].category}
+                  </h4>
+                  <p className="text-gray-500 dark:text-gray-400 text-xs">
+                    Leadership & Communication
+                  </p>
+                </div>
+              </div>
+              <div className="space-y-1">
+                {skills[3].skills.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-block bg-gray-300 dark:bg-gray-500 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md text-xs mr-1 mb-1 hover:bg-gray-400 dark:hover:bg-gray-400 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

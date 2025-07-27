@@ -96,7 +96,7 @@ export default function Hero() {
               ].map((interest, index) => (
                 <span
                   key={index}
-                  className="px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm font-medium hover:bg-green-200 dark:hover:bg-green-900/50 transition-colors"
+                  className="px-4 py-2 bg-green-100 dark:bg-custom-green-800 text-green-800 dark:text-green-100 rounded-full text-sm font-medium hover:bg-green-200 dark:hover:bg-custom-green-700 transition-colors"
                 >
                   {interest}
                 </span>

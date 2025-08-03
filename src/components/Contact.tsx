@@ -3,7 +3,6 @@
 import { Mail, Twitter, Linkedin, Send } from 'lucide-react'
 import { useState } from 'react'
 
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -21,54 +20,32 @@ export default function Contact() {
     })
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    try {
-      // Google Cloud Functions integration
-      // TODO: Replace with your actual Cloud Function URL after deployment
-      const CLOUD_FUNCTION_URL = process.env.NEXT_PUBLIC_CLOUD_FUNCTION_URL || 'YOUR_CLOUD_FUNCTION_URL';
-      
-      const response = await fetch(CLOUD_FUNCTION_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          to: 'p.krennmair@gmail.com'
-        })
-      })
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      
-      const result = await response.json()
-      console.log('Email sent successfully via GCP:', result)
-      
-      // Temporary simulation - remove this line after deploying Cloud Function
-      if (CLOUD_FUNCTION_URL === 'YOUR_CLOUD_FUNCTION_URL') {
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        console.log('⚠️ Using simulation mode. Deploy Cloud Function and update NEXT_PUBLIC_CLOUD_FUNCTION_URL');
-      }
-      
-      setSubmitted(true)
-      setFormData({ name: '', email: '', subject: '', message: '' })
-      
-      // Reset submitted state after 3 seconds
-      setTimeout(() => setSubmitted(false), 3000)
-    } catch (error) {
-      console.error('Failed to send message:', error)
-      alert('Failed to send message. Please try again or contact me directly.')
-    } finally {
-      setIsSubmitting(false)
-    }
+  const encode = (data: { [key: string]: string }) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
   }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formData })
+    })
+      .then(() => {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setSubmitted(false), 3000);
+      })
+      .catch(error => {
+        console.error("Form submission error:", error);
+        // You might want to show a user-facing error message here
+      })
+      .finally(() => setIsSubmitting(false));
+  };
 
   const socialLinks = [
     {
@@ -124,7 +101,14 @@ export default function Contact() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form 
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  onSubmit={handleSubmit} 
+                  className="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">

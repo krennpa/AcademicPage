@@ -1,6 +1,6 @@
 'use client'
 
-import { Briefcase, Building, Calendar, ExternalLink } from 'lucide-react'
+import { Briefcase, Building, Calendar } from 'lucide-react'
 import DynatraceLogo from './DynatraceLogo'
 import AccentureLogo from './AccentureLogo'
 import FUBLogo from './FUBLogo'

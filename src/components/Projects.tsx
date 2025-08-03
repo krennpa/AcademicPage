@@ -242,7 +242,7 @@ export default function Projects() {
               Interested in Collaboration?
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              I'm always open to discussing new projects, consulting opportunities, or research collaborations.
+              I&apos;m always open to discussing new projects, consulting opportunities, or research collaborations.
             </p>
             <button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}

@@ -1,7 +1,7 @@
 'use client'
-
 import { ArrowDown, MapPin, Briefcase } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false)
@@ -33,10 +33,13 @@ export default function Hero() {
               {/* Photo Container */}
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 bg-gradient-to-br from-custom-green-500 to-custom-green-600 rounded-2xl overflow-hidden shadow-2xl">
                 {/* Profile image from public directory */}
-                <img 
+                <Image 
                   src="/profile.jpg" 
                   alt="Dr. Patrick Krennmair" 
                   className="w-full h-full object-cover"
+                  width={288}
+                  height={288}
+                  priority
                   onError={(e) => {
                     // Fallback to initials if image fails to load
                     const target = e.target as HTMLImageElement;

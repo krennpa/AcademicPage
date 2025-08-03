@@ -1,6 +1,6 @@
 'use client'
 
-import { Mail, MapPin, Twitter, Linkedin, Send, Phone, Clock } from 'lucide-react'
+import { Mail, Twitter, Linkedin, Send } from 'lucide-react'
 import { useState } from 'react'
 
 
@@ -70,27 +70,6 @@ export default function Contact() {
     }
   }
 
-  const contactInfo = [
-    {
-      icon: <Mail className="w-5 h-5" />,
-      label: "Email",
-      value: "p.krennmair@gmail.com",
-      href: "mailto:p.krennmair@gmail.com"
-    },
-    {
-      icon: <MapPin className="w-5 h-5" />,
-      label: "Location",
-      value: "Vienna, Austria",
-      href: null
-    },
-    {
-      icon: <Clock className="w-5 h-5" />,
-      label: "Availability",
-      value: "Open for consultations",
-      href: null
-    }
-  ]
-
   const socialLinks = [
     {
       icon: <Twitter className="w-5 h-5" />,
@@ -120,8 +99,8 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
-            I'm always interested in discussing new opportunities, research collaborations, 
-            or consulting projects. Let's connect and explore how we can work together.
+            I&apos;m always interested in discussing new opportunities, research collaborations, 
+            or consulting projects. Let&apos;s connect and explore how we can work together.
           </p>
         </div>
 
@@ -141,7 +120,7 @@ export default function Contact() {
                     Message Sent!
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Thank you for reaching out. I'll get back to you soon.
+                    Thank you for reaching out. I&apos;ll get back to you soon.
                   </p>
                 </div>
               ) : (

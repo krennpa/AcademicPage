@@ -1,6 +1,6 @@
 'use client'
 
-import { ExternalLink, Calendar, ChevronDown, BarChart2, Star, Hash, BookOpen, Tag } from 'lucide-react'
+import { ExternalLink, Calendar, ChevronDown, BarChart2, Star, Hash } from 'lucide-react'
 import { useState, useEffect, useMemo } from 'react'
 
 interface Publication {

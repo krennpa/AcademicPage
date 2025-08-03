@@ -12,9 +12,7 @@ async function fetchWithRetry(url: string, retries = 3, delay = 1500) {
         next: { revalidate: 3600 } 
       });
       if (response.ok) return response;
-      console.warn(`Attempt ${i + 1} for ${url} failed with status: ${response.status}`);
     } catch (error) {
-      console.error(`Attempt ${i + 1} for ${url} failed with error:`, error);
       if (i === retries - 1) throw error;
       await new Promise(res => setTimeout(res, delay));
     }
@@ -47,38 +45,43 @@ export async function GET() {
       let directUrl = '';
 
       try {
-        console.log(`\n--- Fetching details for: ${title} ---`);
-        console.log(`URL: ${scholarUrl}`);
-        
         const detailResponse = await fetchWithRetry(scholarUrl);
         const detailHtml = await detailResponse.text();
         const $detail = cheerio.load(detailHtml);
 
-        // --- DIAGNOSTIC LOG ---
-        // Log the entire HTML to see what the scraper is actually getting.
-        console.log('--- Full Page HTML Received ---');
-        console.log(detailHtml);
-        console.log('--- End of HTML ---');
+        // --- Correct Hybrid Scraping Logic for Abstract ---
+        let abstractText = $detail('.gsh_csp').text().trim();
+        if (!abstractText) {
+          const beschreibungDiv = $detail('.gsc_vcd_field:contains("Beschreibung")');
+          if (beschreibungDiv.length > 0) {
+            abstractText = beschreibungDiv.next('.gsc_vcd_value').text().trim();
+          }
+        }
+        if (abstractText) {
+            abstract = abstractText;
+        }
 
-        // Reverting to the simpler, original logic for the abstract
-        const abstractDiv = $detail('.gsh_csp');
-        if (abstractDiv.length > 0) {
-            const abstractText = abstractDiv.text().trim();
-            if (abstractText) {
-                abstract = abstractText;
+        // --- Final, Corrected Link Extraction Logic ---
+        // Priority 1: The specific PDF/document link container you identified.
+        const docLink = $detail('.gsc_oci_title_ggi a').attr('href');
+        if (docLink) {
+          directUrl = docLink;
+        } else {
+          // Priority 2: The main link on the title.
+          const titleLink = $detail('#gsc_vcd_title_link').attr('href');
+          if (titleLink) {
+            directUrl = titleLink;
+          } else {
+            // Priority 3: The link in the "Journal" field as a fallback.
+            const journalDiv = $detail('.gsc_vcd_field:contains("Journal")');
+            if (journalDiv.length > 0) {
+              const journalLink = journalDiv.next('.gsc_vcd_value').find('a').attr('href');
+              if (journalLink) {
+                directUrl = journalLink;
+              }
             }
+          }
         }
-        
-        console.log(`Extracted Abstract: ${abstract}`);
-
-        // Logic for direct link
-        const titleLink = $detail('#gsc_vcd_title_link').attr('href');
-        if (titleLink) {
-          directUrl = titleLink;
-        }
-        
-        console.log(`Extracted Direct URL: ${directUrl}`);
-
 
       } catch (e) {
         console.error(`Failed to fetch or parse details for "${title}":`, e);

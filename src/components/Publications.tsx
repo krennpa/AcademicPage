@@ -171,11 +171,17 @@ export default function Publications() {
                       {pub.abstract}
                     </p>
                   </div>
-                  <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                    <a href={pub.directUrl || pub.publicationUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-custom-green-600 dark:text-custom-green-400 hover:text-custom-green-700 dark:hover:text-custom-green-300 font-medium text-sm">
-                      {pub.directUrl ? 'View on Publisher' : 'View on Google Scholar'}
+                  <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 flex items-center gap-x-6">
+                    <a href={pub.publicationUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-custom-green-600 dark:text-custom-green-400 hover:text-custom-green-700 dark:hover:text-custom-green-300 font-medium text-sm">
+                      View on Google Scholar
                       <ExternalLink className="w-4 h-4 ml-1.5" />
                     </a>
+                    {pub.directUrl && (
+                       <a href={pub.directUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-custom-green-600 dark:text-custom-green-400 hover:text-custom-green-700 dark:hover:text-custom-green-300 font-medium text-sm">
+                        View on Publisher/PDF
+                        <ExternalLink className="w-4 h-4 ml-1.5" />
+                      </a>
+                    )}
                   </div>
                 </div>
               )}

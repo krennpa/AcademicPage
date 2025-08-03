@@ -120,7 +120,7 @@ export default function About() {
                       {edu.year}
                     </span>
                   </div>
-                  <p className={`${
+                  <p className={`text-gray-700 dark:text-gray-300 ${
                     edu.highlight 
                       ? 'text-custom-green-700 dark:text-custom-green-300' 
                       : 'text-gray-600 dark:text-gray-300'

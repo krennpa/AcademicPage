@@ -284,7 +284,7 @@ export default function Contact() {
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="text-gray-600 dark:text-gray-400">
-            © 2025 Patrick Krennmair. Built with Next.js & Tailwind CSS.
+            © 2025 Dr. Patrick Krennmair, Vienna.
           </p>
           <p className="text-gray-500 dark:text-gray-500 text-sm mt-2">
             Passionate about data science, statistics, and digital transformation.

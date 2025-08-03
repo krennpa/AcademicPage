@@ -1,6 +1,6 @@
 'use client'
 
-import { ExternalLink, Calendar, ChevronDown, BarChart2, Star, Hash, BookOpen } from 'lucide-react'
+import { ExternalLink, Calendar, ChevronDown, BarChart2, Star, Hash, BookOpen, Tag } from 'lucide-react'
 import { useState, useEffect, useMemo } from 'react'
 
 interface Publication {
@@ -10,8 +10,9 @@ interface Publication {
   citedBy: number;
   year: string;
   abstract?: string;
-  publicationUrl: string; // Fallback URL to the Google Scholar page
-  directUrl?: string;      // Preferred direct link to the article
+  publicationUrl: string; 
+  directUrl?: string;
+  tags: string[]; // Added for the new tags
 }
 
 interface ScholarStats {
@@ -19,6 +20,62 @@ interface ScholarStats {
   hIndex: number;
   i10Index: number;
 }
+
+// Function to add tags based on user-defined rules
+const addTagsToPublications = (publications: Omit<Publication, 'tags'>[]): Publication[] => {
+  return publications.map(pub => {
+    const tags: string[] = [];
+    const lowerTitle = pub.title.toLowerCase();
+
+    // Rule 1: Topic based on author
+    if (!pub.authors.toLowerCase().includes('thalhammer')) {
+      tags.push('Statistics');
+    } else {
+      tags.push('Economics');
+    }
+
+    // Rule 2: Peer-reviewed Journal
+    if (
+      lowerTitle.includes('flexible domain prediction') ||
+      lowerTitle.includes('tree-based machine learning') ||
+      (lowerTitle.includes('analysing opportunity cost') && pub.year === '2025') ||
+      (lowerTitle.includes('macht der schulden') && pub.year === '2020')
+    ) {
+      tags.push('Peer-reviewed Journal');
+    }
+
+    // Rule 3: Programming Package
+    if (lowerTitle.includes('r-package')) {
+      tags.push('Programming Package');
+    }
+
+    // Rule 4: Dissertation
+    if (lowerTitle.includes('a framework for the estimation')) {
+      tags.push('Dissertation');
+    }
+
+    // Rule 5: Working Paper
+    if (
+      (lowerTitle.includes('flexible domain prediction') && pub.year === '2022') ||
+      (lowerTitle.includes('analysing opportunity') && pub.year === '2022') ||
+      (lowerTitle.includes('macht der schulden') && pub.year !== '2020')
+    ) {
+      tags.push('Working Paper');
+    }
+    
+    // Rule 6: Remove 'Peer-reviewed Journal' if it's a 'Dissertation'
+    if (tags.includes('Dissertation') && tags.includes('Peer-reviewed Journal')) {
+        const index = tags.indexOf('Peer-reviewed Journal');
+        if (index > -1) {
+            tags.splice(index, 1);
+        }
+    }
+
+
+    return { ...pub, tags };
+  });
+};
+
 
 export default function Publications() {
   const [data, setData] = useState<{ stats: ScholarStats; publications: Publication[] } | null>(null);
@@ -36,7 +93,10 @@ export default function Publications() {
           throw new Error(errorData.error || 'Failed to fetch data');
         }
         const scholarData = await response.json();
-        setData(scholarData);
+        // Add tags to the fetched data
+        const taggedPublications = addTagsToPublications(scholarData.publications);
+        setData({ ...scholarData, publications: taggedPublications });
+
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An unknown error occurred');
       } finally {
@@ -59,6 +119,18 @@ export default function Publications() {
   const handleToggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
+  
+  const getTagColor = (tag: string) => {
+    const lowerTag = tag.toLowerCase();
+    if (lowerTag.includes('peer-reviewed')) return 'bg-green-200 text-green-900 dark:bg-green-800/70 dark:text-green-100';
+    if (lowerTag.includes('dissertation')) return 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200';
+    if (lowerTag.includes('package')) return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-200';
+    if (lowerTag.includes('working paper')) return 'bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200';
+    if (lowerTag.includes('economics')) return 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-200';
+    if (lowerTag.includes('statistics')) return 'bg-teal-100 text-teal-800 dark:bg-teal-900/50 dark:text-teal-200';
+    return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300';
+  };
+
 
   if (loading) {
     return (
@@ -144,6 +216,13 @@ export default function Publications() {
               <div className="p-6 cursor-pointer" onClick={() => handleToggleExpand(index)}>
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between">
                   <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                      {pub.tags.map(tag => (
+                        <span key={tag} className={`px-2.5 py-0.5 rounded-full text-xs font-semibold ${getTagColor(tag)}`}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 leading-tight">{pub.title}</h4>
                     <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">{pub.authors}</p>
                     <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
@@ -172,12 +251,12 @@ export default function Publications() {
                     </p>
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 flex items-center gap-x-6">
-                    <a href={pub.publicationUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-custom-green-600 dark:text-custom-green-400 hover:text-custom-green-700 dark:hover:text-custom-green-300 font-medium text-sm">
+                    <a href={pub.publicationUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-custom-green-700 dark:text-custom-green-300 hover:text-custom-green-800 dark:hover:text-custom-green-200 font-medium text-sm transition-colors duration-200 hover:underline">
                       View on Google Scholar
                       <ExternalLink className="w-4 h-4 ml-1.5" />
                     </a>
                     {pub.directUrl && (
-                       <a href={pub.directUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-custom-green-600 dark:text-custom-green-400 hover:text-custom-green-700 dark:hover:text-custom-green-300 font-medium text-sm">
+                       <a href={pub.directUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-custom-green-700 dark:text-custom-green-300 hover:text-custom-green-800 dark:hover:text-custom-green-200 font-medium text-sm transition-colors duration-200 hover:underline">
                         View on Publisher/PDF
                         <ExternalLink className="w-4 h-4 ml-1.5" />
                       </a>

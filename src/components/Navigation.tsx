@@ -38,9 +38,6 @@ export default function Navigation() {
     // Set color scheme
     document.documentElement.style.colorScheme = isDarkMode ? 'dark' : 'light'
     
-    console.log('Initial dark mode:', isDarkMode)
-    console.log('Initial HTML classes:', document.documentElement.className)
-    console.log('Initial body classes:', document.body.className)
   }, [])
 
   const toggleDarkMode = () => {
@@ -62,18 +59,14 @@ export default function Navigation() {
     // Force a style recalculation
     document.documentElement.style.colorScheme = newDarkMode ? 'dark' : 'light'
     
-    // Debug logging
-    console.log('Dark mode toggled:', newDarkMode)
-    console.log('HTML classes:', document.documentElement.className)
-    console.log('Body classes:', document.body.className)
-    console.log('Data theme:', document.documentElement.getAttribute('data-theme'))
   }
 
   const navItems = [
-    { label: 'Projects', href: '#projects' },
+    { label: 'About', href: '#about' },
+    { label: 'Experience', href: '#experience' },
+    // { label: 'Projects', href: '#projects' },
     { label: 'Publications', href: '#publications' },
-    { label: 'Activities', href: '#activities' },
-    { label: 'Prizes', href: '#prizes' },
+    { label: 'Contact', href: '#contact' },
   ]
 
   const scrollToSection = (href: string) => {
@@ -94,7 +87,7 @@ export default function Navigation() {
               onClick={() => scrollToSection('#hero')}
               className="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-800 dark:hover:text-gray-100 transition-colors"
             >
-              Patrick Krennmair
+              Dr. Patrick Krennmair
             </button>
           </div>
 

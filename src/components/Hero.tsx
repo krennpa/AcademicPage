@@ -35,7 +35,7 @@ export default function Hero() {
                 {/* Profile image from public directory */}
                 <img 
                   src="/profile.jpg" 
-                  alt="Patrick Krennmair" 
+                  alt="Dr. Patrick Krennmair" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     // Fallback to initials if image fails to load

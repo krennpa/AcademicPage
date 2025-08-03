@@ -44,9 +44,7 @@
   color: #f9fafb !important;
 }
 
-.dark p, .dark span, .dark div {
-  color: #d1d5db !important;
-}
+
 
 .dark .bg-white {
   background-color: #111827 !important;

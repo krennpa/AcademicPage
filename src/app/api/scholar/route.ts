@@ -49,8 +49,12 @@ export async function GET() {
         const detailHtml = await detailResponse.text();
         const $detail = cheerio.load(detailHtml);
 
-        // --- Correct Hybrid Scraping Logic for Abstract ---
-        let abstractText = $detail('.gsh_csp').text().trim();
+        // --- Final, Multi-Step Abstract Extraction Logic ---
+        let abstractText = '';
+        abstractText = $detail('#gsc_oci_descr.gsc_oci_value').text().trim();
+        if (!abstractText) {
+          abstractText = $detail('.gsh_small .gsh_csp').text().trim();
+        }
         if (!abstractText) {
           const beschreibungDiv = $detail('.gsc_vcd_field:contains("Beschreibung")');
           if (beschreibungDiv.length > 0) {
@@ -61,26 +65,31 @@ export async function GET() {
             abstract = abstractText;
         }
 
-        // --- Final, Corrected Link Extraction Logic ---
-        // Priority 1: The specific PDF/document link container you identified.
-        const docLink = $detail('.gsc_oci_title_ggi a').attr('href');
-        if (docLink) {
-          directUrl = docLink;
-        } else {
-          // Priority 2: The main link on the title.
-          const titleLink = $detail('#gsc_vcd_title_link').attr('href');
-          if (titleLink) {
-            directUrl = titleLink;
-          } else {
-            // Priority 3: The link in the "Journal" field as a fallback.
-            const journalDiv = $detail('.gsc_vcd_field:contains("Journal")');
-            if (journalDiv.length > 0) {
-              const journalLink = journalDiv.next('.gsc_vcd_value').find('a').attr('href');
-              if (journalLink) {
-                directUrl = journalLink;
-              }
-            }
+        // --- Final, Multi-Step Link Extraction Logic ---
+        let link = '';
+        // Priority 1: The class you just provided
+        link = $detail('a.gsc_oci_title_link').attr('href') || '';
+        
+        // Priority 2: The PDF link container
+        if (!link) {
+          link = $detail('.gsc_oci_title_ggi a').attr('href') || '';
+        }
+        
+        // Priority 3: The main title link ID
+        if (!link) {
+          link = $detail('#gsc_vcd_title_link').attr('href') || '';
+        }
+        
+        // Priority 4: The Journal field link
+        if (!link) {
+          const journalDiv = $detail('.gsc_vcd_field:contains("Journal")');
+          if (journalDiv.length > 0) {
+            link = journalDiv.next('.gsc_vcd_value').find('a').attr('href') || '';
           }
+        }
+        
+        if(link) {
+            directUrl = link;
         }
 
       } catch (e) {

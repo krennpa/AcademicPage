@@ -70,11 +70,10 @@ export default function Navigation() {
   }
 
   const navItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
     { label: 'Publications', href: '#publications' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Activities', href: '#activities' },
+    { label: 'Prizes', href: '#prizes' },
   ]
 
   const scrollToSection = (href: string) => {

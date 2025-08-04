@@ -71,7 +71,7 @@ export default function About() {
               {interests.map((interest, index) => (
                 <div 
                   key={index}
-                  className="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gradient-to-r hover:from-custom-green-50 hover:to-green-50 dark:hover:from-gray-700 dark:hover:to-custom-green-900/30 transition-all duration-300 hover:shadow-lg"
+                  className="about-card flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gradient-to-r hover:from-custom-green-50 hover:to-green-50 dark:hover:bg-custom-green-800 transition-all duration-300 hover:shadow-lg"
                 >
                   <div className="flex-shrink-0 p-2 bg-custom-green-100 dark:bg-custom-green-900/30 rounded-lg text-custom-green-700 dark:text-custom-green-400">
                     {interest.icon}
@@ -80,7 +80,7 @@ export default function About() {
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                       {interest.title}
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 dark:text-white about-description">
                       {interest.description}
                     </p>
                   </div>
@@ -98,11 +98,11 @@ export default function About() {
               {education.map((edu, index) => (
                 <div 
                   key={index}
-                  className={`p-6 rounded-xl border-l-4 ${
+                  className={`about-card p-6 rounded-xl border-l-4 ${
                     edu.highlight 
-                      ? 'bg-custom-green-50 dark:bg-custom-green-900/20 border-custom-green-400 hover:bg-gradient-to-r hover:from-custom-green-100 hover:to-green-100 dark:hover:from-custom-green-900/30 dark:hover:to-custom-green-900/20' 
-                      : 'bg-gray-50 dark:bg-gray-800 border-custom-green-200 dark:border-custom-green-300 hover:bg-gradient-to-r hover:from-custom-green-50 hover:to-green-50 dark:hover:from-gray-700 dark:hover:to-custom-green-900/20'
-                  } hover:shadow-lg transition-all duration-300`}
+                      ? 'bg-custom-green-50 dark:bg-custom-green-900/20 border-custom-green-400' 
+                      : 'bg-gray-50 dark:bg-gray-800 border-custom-green-200 dark:border-custom-green-300'
+                  } hover:bg-gradient-to-r from-custom-green-50 to-green-50 dark:hover:bg-custom-green-800 hover:shadow-lg transition-all duration-300`}
                 >
                   <div className="flex items-start justify-between mb-2">
                     <h4 className={`text-lg font-semibold ${
@@ -112,7 +112,7 @@ export default function About() {
                     }`}>
                       {edu.degree}
                     </h4>
-                    <span className={`text-sm px-3 py-1 rounded-full ${
+                    <span className={`education-year-tag text-sm px-3 py-1 rounded-full ${
                       edu.highlight 
                         ? 'bg-custom-green-100 dark:bg-custom-green-900/50 text-custom-green-800 dark:text-custom-green-200' 
                         : 'bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300'
@@ -120,10 +120,10 @@ export default function About() {
                       {edu.year}
                     </span>
                   </div>
-                  <p className={`text-gray-700 dark:text-gray-300 ${
-                    edu.highlight 
-                      ? 'text-custom-green-700 dark:text-custom-green-300' 
-                      : 'text-gray-600 dark:text-gray-300'
+                  <p className={`about-description ${
+                    edu.highlight
+                      ? "text-custom-green-700 dark:text-custom-green-300"
+                      : "text-gray-600 dark:text-white"
                   }`}>
                     {edu.institution}
                   </p>

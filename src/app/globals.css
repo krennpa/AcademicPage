@@ -20,6 +20,35 @@
   background: linear-gradient(to bottom right, #111827, #111827, #1f3d30) !important;
 }
 
+.dark #about .about-description {
+  color: #8dd5a7 !important;
+}
+
+.dark .about-card:hover {
+  background: linear-gradient(to bottom right, #254939, #111827) !important;
+}
+
+.dark .education-year-tag {
+  background-color: rgba(31, 61, 48, 0.5) !important; /* custom-green-900/50 */
+  color: #f9fafb !important; /* white */
+}
+
+.dark .publication-abstract {
+  color: #f9fafb !important;
+}
+
+.dark .consultation-areas-container {
+  background: linear-gradient(to bottom right, #1f3d30, #111827) !important;
+}
+
+.dark .consultation-area-text {
+  color: #f9fafb !important;
+}
+
+.dark .expertise-card {
+  background: linear-gradient(to bottom right, #1f3d30, #111827) !important;
+}
+
 .dark #about {
   background-color: #111827 !important;
 }
@@ -44,7 +73,9 @@
   color: #f9fafb !important;
 }
 
-
+.dark .hero-role-text {
+  color: #5bb882 !important; /* This is custom-green-400 */
+}
 
 .dark .bg-white {
   background-color: #111827 !important;

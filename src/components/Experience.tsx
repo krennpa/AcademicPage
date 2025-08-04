@@ -246,25 +246,25 @@ export default function Experience() {
             
             {/* Top Row */}
             {/* AI/ML & Advanced Analytics - Top Left */}
-            <div className="bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-gray-800 dark:via-gray-900 dark:to-black rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
-              <div className="flex items-start justify-between mb-4">
+            <div className="expertise-card bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-custom-green-900 dark:via-gray-900 dark:to-black rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-gray-300 dark:bg-gray-700 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-lg text-gray-600 dark:text-gray-300">🤖</span>
+                </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-blue-400 dark:group-hover:text-blue-300 transition-colors">
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-green-400 dark:group-hover:text-green-300 transition-colors">
                     {skills[0].category}
                   </h4>
                   <p className="text-gray-600 dark:text-gray-400 text-xs">
                     Core AI & Machine Learning
                   </p>
                 </div>
-                <div className="w-10 h-10 bg-gray-300 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                  <span className="text-lg text-gray-600 dark:text-gray-300">🤖</span>
-                </div>
               </div>
               <div className="flex flex-wrap gap-2">
                 {skills[0].skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs font-medium shadow-sm hover:shadow-md transition-shadow border border-gray-300 dark:border-gray-600"
+                    className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs mr-1 mb-1 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                   >
                     {skill}
                   </span>
@@ -273,7 +273,7 @@ export default function Experience() {
             </div>
 
             {/* Programming & Data Engineering - Top Right */}
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div className="expertise-card bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-custom-green-900 dark:via-gray-900 dark:to-black rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 bg-gray-300 dark:bg-gray-700 rounded-lg flex items-center justify-center mr-3">
                   <span className="text-lg text-gray-600 dark:text-gray-300">💻</span>
@@ -301,13 +301,13 @@ export default function Experience() {
 
             {/* Bottom Row */}
             {/* Research & Statistical Methods - Bottom Left */}
-            <div className="bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div className="expertise-card bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-custom-green-900 dark:via-gray-900 dark:to-black rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 bg-gray-400 dark:bg-gray-700 rounded-lg flex items-center justify-center mr-3">
                   <span className="text-lg text-gray-600 dark:text-gray-300">📊</span>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-purple-400 dark:group-hover:text-purple-300 transition-colors">
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-green-400 dark:group-hover:text-green-300 transition-colors">
                     {skills[2].category}
                   </h4>
                   <p className="text-gray-500 dark:text-gray-400 text-xs">
@@ -315,11 +315,11 @@ export default function Experience() {
                   </p>
                 </div>
               </div>
-              <div className="space-y-1">
+              <div className="flex flex-wrap gap-2">
                 {skills[2].skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="inline-block bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md text-xs mr-1 mb-1 hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors"
+                    className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs mr-1 mb-1 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                   >
                     {skill}
                   </span>
@@ -328,13 +328,13 @@ export default function Experience() {
             </div>
 
             {/* Professional & Consulting - Bottom Right */}
-            <div className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 dark:from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div className="expertise-card bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-custom-green-900 dark:via-gray-900 dark:to-black rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 bg-gray-400 dark:bg-gray-700 rounded-lg flex items-center justify-center mr-3">
                   <span className="text-lg text-gray-600 dark:text-gray-300">🎯</span>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-red-400 dark:group-hover:text-red-300 transition-colors">
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-green-400 dark:group-hover:text-green-300 transition-colors">
                     {skills[3].category}
                   </h4>
                   <p className="text-gray-500 dark:text-gray-400 text-xs">
@@ -342,11 +342,11 @@ export default function Experience() {
                   </p>
                 </div>
               </div>
-              <div className="space-y-1">
+              <div className="flex flex-wrap gap-2">
                 {skills[3].skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="inline-block bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md text-xs mr-1 mb-1 hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors"
+                    className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs mr-1 mb-1 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                   >
                     {skill}
                   </span>

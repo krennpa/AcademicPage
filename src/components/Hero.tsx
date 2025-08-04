@@ -69,7 +69,7 @@ export default function Hero() {
             {/* Role */}
             <div className="flex items-center justify-center lg:justify-start mb-4">
               <Briefcase className="w-5 h-5 text-custom-green-700 dark:text-custom-green-400 mr-2" />
-              <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 font-medium">
+              <p className="text-xl sm:text-2xl text-gray-700 hero-role-text mr-2">
                 Senior Data Scientist and Researcher
               </p>
             </div>

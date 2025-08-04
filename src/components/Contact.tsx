@@ -217,7 +217,7 @@ export default function Contact() {
             </div>
 
             {/* Consultation Areas */}
-            <div className="bg-gradient-to-br from-custom-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-custom-green-900/30 rounded-2xl p-6">
+            <div className="consultation-areas-container bg-gradient-to-br from-custom-green-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-custom-green-900/30 rounded-2xl p-6">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Consultation Areas
               </h4>
@@ -234,7 +234,7 @@ export default function Contact() {
                 ].map((area, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-custom-green-700 dark:bg-custom-green-400 rounded-full mr-3"></div>
-                    <span className="text-gray-700 dark:text-gray-300 text-sm">
+                    <span className="consultation-area-text text-gray-700 dark:text-gray-300 text-sm">
                       {area}
                     </span>
                   </div>

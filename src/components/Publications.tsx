@@ -246,17 +246,17 @@ export default function Publications() {
                 <div className="px-6 pb-6 bg-gray-50 dark:bg-gray-800/50">
                   <div className="pt-4">
                     <h5 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Abstract</h5>
-                    <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                    <p className="publication-abstract text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                       {pub.abstract}
                     </p>
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 flex items-center gap-x-6">
-                    <a href={pub.publicationUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-custom-green-700 dark:text-custom-green-300 hover:text-custom-green-800 dark:hover:text-custom-green-200 font-medium text-sm transition-colors duration-200 hover:underline">
+                    <a href={pub.publicationUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-custom-green-700 dark:text-white dark:hover:text-gray-300 font-medium text-sm transition-colors duration-200 hover:underline">
                       View on Google Scholar
                       <ExternalLink className="w-4 h-4 ml-1.5" />
                     </a>
                     {pub.directUrl && (
-                       <a href={pub.directUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-custom-green-700 dark:text-custom-green-300 hover:text-custom-green-800 dark:hover:text-custom-green-200 font-medium text-sm transition-colors duration-200 hover:underline">
+                       <a href={pub.directUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-custom-green-700 dark:text-white dark:hover:text-gray-300 font-medium text-sm transition-colors duration-200 hover:underline">
                         View on Publisher/PDF
                         <ExternalLink className="w-4 h-4 ml-1.5" />
                       </a>
